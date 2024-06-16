@@ -42,10 +42,8 @@ class ForecastServiceImpl: ForecastService {
 class ForecastNetworkServiceMock: ForecastNetworkService {
     func getForecast() -> AnyPublisher<[ForecastItemDTO], Error> {
         let staticData: [ForecastItemDTO] = [
-            // Add your static data here
             ForecastItemDTO(day: "Monday", description: "Sunny", sunrise: 1623049200, sunset: 1623096000, chanceRain: 0.1, high: 28, low: 18, type: "sunny"),
             ForecastItemDTO(day: "Tuesday", description: "Cloudy", sunrise: 1623135600, sunset: 1623182400, chanceRain: 0.4, high: 24, low: 16, type: "cloudy")
-            // ...
         ]
         return Just(staticData)
             .setFailureType(to: Error.self)

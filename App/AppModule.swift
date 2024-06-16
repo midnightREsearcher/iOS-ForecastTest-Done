@@ -25,6 +25,6 @@ public class AppModule: Module {
     }
     
     private func isDemoMode() -> Bool {
-        return true
+        return false
     }
 }
